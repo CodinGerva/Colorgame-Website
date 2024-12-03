@@ -1,0 +1,61 @@
+doctype html
+html
+  head
+    title ComunColor
+    link(rel='stylesheet' href='/css/styles.css')
+    link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
+    style.
+      @import url(https://pro.fontawesome.com/releases/v5.10.0/css/all.css);
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap');
+      @import url('https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css');
+      body {
+          font-family: 'Poppins', sans-serif;
+      }
+    block stylesheets
+  body
+    .navbar-section
+      .navbar-container
+        .navbar-container-logo 
+          .navbar-logo 
+            img(src="/medias/Logo_Largo_Bianco.png", alt="Logo", width="140", height="45", class="d-inline-block align-text-top")
+        .navbar-container-buttons
+          .navbar-item-home
+            |Home
+          .navbar-item-partecipa
+            |Partecipa
+          .navbar-item-contatti
+            |Contatti 
+          .navbar-item-sponsor
+            |Sponsors
+        .navbar-donate-button 
+          |DONAZIONI
+        .navbar-burger-menu
+          i.fas.fa-bars
+
+    block content
+    script.
+      document.querySelector('.navbar-burger-menu').addEventListener('click', function() {
+        document.querySelector('.navbar-container').classList.toggle('open');
+      });
+
+      document.querySelector('.navbar-item-home').addEventListener('click', function() {
+        window.location.href = '/'
+      });
+
+      document.querySelector('.navbar-item-partecipa').addEventListener('click', function() {
+        window.location.href = '/partecipa'
+      });
+
+      document.querySelector('.navbar-item-contatti').addEventListener('click', function() {
+        window.location.href = '/contatti'
+      });
+
+      document.querySelector('.navbar-item-sponsor').addEventListener('click', function() {
+        window.location.href = '/sponsors'
+      });
+
+      document.querySelector('.navbar-donate-button').addEventListener('click', function() {
+        window.location.href = 'https://donate.stripe.com/test_cN2aIBbOEejd5DGfYZ'
+      });
+
+      

@@ -1,0 +1,191 @@
+extends layout
+
+block content
+  head
+    title ColorGame - Comune di Parma
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel='stylesheet' href='/css/styles.css')
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    style.
+      body {font-family: "Lato", sans-serif}
+      .mySlides {display: none}
+      .logo { width: 150px; }
+      .header {
+        background-color: #f8f9fa;
+        padding: 20px 0;
+      }
+      .header .logo {
+        margin-right: 10px;
+      }
+      .header h1 {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .section {
+        padding: 60px 0;
+      }
+      .section-title {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      #titolohome{
+        font-size: 46px;
+      }
+
+  body
+    section.doppia-sezione
+      .container#container-doppia-sezione-partecipa
+        .row
+          // Colonna Sinistra: Immagine di bambini che si divertono
+          .col-md-6.text-center
+            img.img-fluid(src="/medias/kids_playing.jpg" alt="Bambini che si divertono")
+          // Colonna Destra: Titolo e Descrizione
+          .col-md-6.d-flex.flex-column.justify-content-center.text-center
+            h1.section-title-light#titolohome Benvenuto in ColorGame
+            p 
+              | Un'iniziativa speciale portata avanti da un 
+              strong team di giovani
+              |  che mira a far divertire 
+              strong grandi e piccoli 
+              |  attraverso una serie di 
+              strong mini giochi a punti
+              | . Alla fine, in base ai punti ottenuti, ai partecipanti verranno dati 
+              strong colori in polvere 
+              |  per scatenare la loro immaginazione. 
+              strong Tutti i fondi 
+              |  raccolti dai biglietti e dalle donazioni volontarie saranno donati all'
+              strong Ospedale Maggiore di Parma
+              | .
+            button.btn.btn-warning.btn-lg(type='button' data-mdb-ripple-color='#ffffff' onclick="window.location.href='/partecipa';")  Partecipa 
+
+          
+    .section
+      .container#container-doppia-sezione
+        .row#iconegiochi
+          .col-md-4.text-center
+            i.fa.fa-paint-brush.fa-4x.text-primary
+            h3 Inventa
+            p 
+            | Crea il tuo 
+            strong mondo colorato 
+            | e personalizza la tua 
+            em esperienza di gioco.
+          .col-md-4.text-center
+            i.fa.fa-gamepad.fa-4x.text-success
+            h3 Gioca
+            p 
+            | Partecipa a eventi, sfide e competizioni divertenti con 
+            strong tutta la comunità.
+          .col-md-4.text-center
+            i.fa.fa-users.fa-4x.text-info
+            h3 Unisciti
+            p 
+            | Incontra 
+            strong nuovi amici
+            |, condividi idee e 
+            strong collabora 
+            |con 
+            em altri partecipanti.
+
+   
+
+    section.doppia-sezione-parma
+      .container
+        .row
+          .col-md-6.d-flex.flex-column.justify-content-center.text-center
+            h2.section-title-light Partecipa All'Evento!
+            p Partecipando e acquistando il 
+              strong biglietto 
+              | , potrai 
+              strong gareggiare 
+              | ai nostri giochi e contribuire a una causa importante. 
+              em Tutti i fondi 
+              | raccolti saranno donati all'
+              strong Ospedale Maggiore di Parma
+              | . Unitevi a noi per fare del bene 
+              em divertendovi
+              | ! Il biglietto è richiesto solo per chi partecipa attivamente ai giochi, non per chi desidera semplicemente visitare.
+                        
+            
+
+            p 15:30 - 21:30
+          .col-md-6.text-center
+            .form-partecipazione-container 
+              iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5662.915442288554!2d10.328499876675687!3d44.791859678045974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806b20595556ab%3A0xa5696e2ae29e8cde!2sParco%20della%20Cittadella!5e0!3m2!1sit!2sit!4v1724239732451!5m2!1sit!2sit' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+    
+
+        // Footer
+    footer.text-center.text-lg-start.bg-body-tertiary.text-muted
+      // Section: Social media
+
+      section
+        .container.text-center.text-md-start.mt-5
+          // Grid row
+          .row.mt-3
+            // Grid column
+            .col-md-3.col-lg-4.col-xl-3.mx-auto.mb-4
+              // Content
+              h6.text-uppercase.fw-bold.mb-4
+                |  Il progetto
+              p
+                | Colorgame è un progetto candidato al concorso europeo per eventi organizzati da giovani per giovani!
+              .navbar-container-logo 
+                .navbar-logo 
+                  img(src="/medias/Logo_Largo_Bianco.png", alt="Logo", width="180", height="60", class="d-inline-block align-text-top")
+            // Grid column
+            .col-md-2.col-lg-2.col-xl-2.mx-auto.mb-4
+              // Links
+              h6.text-uppercase.fw-bold.mb-4
+                | Altre Pagine
+              p
+                a.text-reset(href='#!') Home
+              p
+                a.text-reset(href='#!') Partecipa
+              p
+                a.text-reset(href='#!') Contatti
+              p
+                a.text-reset(href='#!') Sponsor
+            // Grid column
+            // Grid column
+            
+            .col-md-4.col-lg-3.col-xl-3.mx-auto.mb-md-0.mb-4
+              // Links
+              h6.text-uppercase.fw-bold.mb-4 Contatti
+              p
+                i.fas.fa-home.me-3
+                |  Cittadella di Parma
+              p
+                i.fas.fa-envelope.me-3
+                |  colorgame@gmail.com
+              p
+                i.fas.fa-phone.me-3
+                |  + 01 234 567 88
+              
+            // Grid column
+          // Grid row
+      // Section: Links
+      // Copyright
+      .text-center.p-4(style='background-color: rgba(0, 0, 0, 0.05);')
+        | &copy; 2024 Copyright: 
+        a.text-reset.fw-bold(href='') Colorgame
+      // Copyright
+    // Footer
+
+        
+      
+
+    
+
+
+    
+
+
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+    

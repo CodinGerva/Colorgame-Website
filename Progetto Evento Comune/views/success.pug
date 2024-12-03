@@ -1,0 +1,150 @@
+extends layout
+block content
+  head
+    title Pagamento Avvenuto
+    link(rel='stylesheet' href='/css/styles.css')
+    link(rel='stylesheet' href='/css/style_success.css')
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+  body
+    .container-prima-parte
+      #graziexacquisto
+        h1 Acquisto avvenuto con successo! 🎉
+      #containerAnimazionePagamento
+        .success-animation
+          svg.checkmark(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 52 52')
+            circle.checkmark__circle(cx='26' cy='26' r='25' fill='none')
+            path.checkmark__check(fill='none' d='M14.1 27.2l7.1 7.2 16.7-16.8')
+    
+    section#regole
+      .container-carte-acquisto
+        .card-body-acquisto
+          .container-numero-acquisto 
+            svg.bi.bi-1-square-fill(xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='rgb(13, 55, 127)' viewbox='0 0 16 16')
+              path(d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm7.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z')
+
+          .container-body-acquisto
+            h5 Benvenuto 👋
+            p 
+              | Grazie per aver acquistato il biglietto! 
+              strong(style="color:#ffb042") Preparati per un'esperienza indimenticabile! 
+              | Sarà una giornata 
+              italic piena di sorprese
+              | e 
+              strong divertimento. 
+              | Ricorda di avere con te sempre 
+              strong(style="color:rgb(13, 55, 127)") il sorriso 
+              | e un po' di spirito d'avventura! Non vediamo l'ora di vederti!
+
+        .card-body-acquisto
+          .container-numero-acquisto 
+            svg.bi.bi-2-square-fill(xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='rgb(13, 55, 127)' viewbox='0 0 16 16')
+              path(d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm4.646 6.24v.07H5.375v-.064c0-1.213.879-2.402 2.637-2.402 1.582 0 2.613.949 2.613 2.215 0 1.002-.6 1.667-1.287 2.43l-.096.107-1.974 2.22v.077h3.498V12H5.422v-.832l2.97-3.293c.434-.475.903-1.008.903-1.705 0-.744-.557-1.236-1.313-1.236-.843 0-1.336.615-1.336 1.306')
+
+          .container-body-acquisto
+            h5 Ritiro del biglietto 🎟️
+            p
+              | Ricordiamo che dovrai presentare il biglietto e ritirarlo da 
+              strong(style="color:rgb(13, 55, 127)") sabato 21 settembre 
+              | fino alle ore 
+              strong(style="color:rgb(13, 55, 127)") 13:00 del 22 settembre.     
+              | Non dimenticare di 
+              strong portare con te un documento 
+              | valido per il ritiro. 
+              strong Il tuo biglietto è l'accesso a una giornata memorabile 
+              |, quindi custodiscilo con cura! 😉
+
+        .card-body-acquisto
+          .container-numero-acquisto 
+            svg.bi.bi-3-square-fill(xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='rgb(13, 55, 127)' viewbox='0 0 16 16')
+              path(d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm5.918 8.414h-.879V7.342h.838c.78 0 1.348-.522 1.342-1.237 0-.709-.563-1.195-1.348-1.195-.79 0-1.312.498-1.348 1.055H5.275c.036-1.137.95-2.115 2.625-2.121 1.594-.012 2.608.885 2.637 2.062.023 1.137-.885 1.776-1.482 1.875v.07c.703.07 1.71.64 1.734 1.917.024 1.459-1.277 2.396-2.93 2.396-1.705 0-2.707-.967-2.754-2.144H6.33c.059.597.68 1.06 1.541 1.066.973.006 1.6-.563 1.588-1.354-.006-.779-.621-1.318-1.541-1.318')
+
+          .container-body-acquisto
+            h5 Abbigliamento 👗
+            p 
+              | Vestiti comodo, con abiti lavabili. Noi ti daremo una 
+              strong(style="color:#ffb042") maglietta bianca 
+              | che potrai personalizzare durante i giochi. Non dimenticare di portare con te dei 
+              italic pantaloni comodi 
+              | e delle scarpe adatte alle attività all'aperto. 
+              strong Sporcarsi fa parte del divertimento
+              |! 💦🎨
+
+        .card-body-acquisto
+          .container-numero-acquisto 
+            svg.bi.bi-4-square-fill(xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='rgb(13, 55, 127)' viewbox='0 0 16 16')
+              path(d='M6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218')
+              path(d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm5.519 5.057q.33-.527.657-1.055h1.933v5.332h1.008v1.107H10.11V12H8.85v-1.559H4.978V9.322c.77-1.427 1.656-2.847 2.542-4.265Z')
+
+          .container-body-acquisto
+            h5 Divertiti! 🎨
+            p 
+              | 
+              italic Dai il tuo meglio, lasciati andare e vivi questa esperienza al massimo! 
+              strong(style="color:rgb(13, 55, 127)") 
+              strong Divertiti 
+              | e crea ricordi 
+              strong indimenticabili 
+              | con i tuoi amici. 
+              italic Ridi, gioca e colorati! 
+              strong Non vediamo l'ora di vederti brillare! ✨
+
+    footer.text-center.text-lg-start.bg-body-tertiary.text-muted
+      // Section: Social media
+
+      section
+        .container.text-center.text-md-start.mt-5
+          // Grid row
+          .row.mt-3
+            // Grid column
+            .col-md-3.col-lg-4.col-xl-3.mx-auto.mb-4
+              // Content
+              h6.text-uppercase.fw-bold.mb-4
+                |  Il progetto
+              p
+                | Colorgame è un progetto candidato al concorso europeo per eventi organizzati da giovani per giovani!
+              .navbar-container-logo 
+                .navbar-logo 
+                  img(src="/medias/Logo_Largo_Bianco.png", alt="Logo", width="180", height="60", class="d-inline-block align-text-top")
+            // Grid column
+            .col-md-2.col-lg-2.col-xl-2.mx-auto.mb-4
+              // Links
+              h6.text-uppercase.fw-bold.mb-4
+                | Altre Pagine
+              p
+                a.text-reset(href='#!') Home
+              p
+                a.text-reset(href='#!') Partecipa
+              p
+                a.text-reset(href='#!') Contatti
+              p
+                a.text-reset(href='#!') Sponsor
+            // Grid column
+            // Grid column
+            
+            .col-md-4.col-lg-3.col-xl-3.mx-auto.mb-md-0.mb-4
+              // Links
+              h6.text-uppercase.fw-bold.mb-4 Contatti
+              p
+                i.fas.fa-home.me-3
+                |  Cittadella di Parma
+              p
+                i.fas.fa-envelope.me-3
+                |  colorgame@gmail.com
+              p
+                i.fas.fa-phone.me-3
+                |  + 01 234 567 88
+              
+            // Grid column
+          // Grid row
+      // Section: Links
+      // Copyright
+      .text-center.p-4(style='background-color: rgba(0, 0, 0, 0.05);')
+        | &copy; 2024 Copyright: 
+        a.text-reset.fw-bold(href='') Colorgame
+      // Copyright
+    // Footer

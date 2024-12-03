@@ -1,0 +1,63 @@
+doctype html
+html
+  head
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Valutazione Mini Giochi
+    link(rel="stylesheet", href="/css/style_asssegnapunti.css")
+    script(src="https://unpkg.com/html5-qrcode/html5-qrcode.min.js")
+    script(src="/js/scanner.js")
+
+    style.
+      .input-container {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+      }
+      input {
+        padding: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+      .camera-icon {
+        cursor: pointer;
+        font-size: 24px;
+        margin-left: 10px;
+        color: #0d377f;
+      }
+
+  body
+    form#gameForm
+      label(for="game") Scegli il gioco:
+      select#game(name="game")
+        option(value="color-run") Color Run 🏃‍♂️
+        option(value="ostacoloso") Ostacoloso 🏃‍♀️
+        option(value="buttala-dentro") Buttala Dentro 🏀
+        option(value="contano-i-canestri") Contano i Canestri 🎯
+        option(value="vediamo-quanto-vola") Vediamo Quanto Vola ✈️
+        option(value="chi-tira-vince") Chi Tira Vince 🎳
+        option(value="questione-di-punti") Questione di Punti 🎯
+        option(value="fai-centro") Fai Centro 🎯
+        option(value="water-pong") Water Pong 🍺
+        option(value="quante-ne-sai") Quante ne Sai ❓
+        option(value="reattivita") Reattività ⚡
+        option(value="l-intesa-vincente") L'Intesa Vincente 🤝
+        option(value="sei-troppo-bianco-colorati") Acquisto Colore 80g 🎨
+
+    .containerscansione
+      .input-container
+        input#ticketCodeInput(placeholder="Codice Biglietto")
+        div.camera-icon#ticketScannerIcon 📷
+      #player-info
+        p Giocatore trovato: 
+      #qr-reader
+      button#button_scansione Ricerca Giocatore
+
+    .evaluation-container#evaluationForm(style="display:none")
+      h3 Seleziona la valutazione:
+      .evaluation-options.flex-row#evaluationOptions
+      
+      .color-purchase-options(style="display:none")
+        label(for="sacchetti") Quantità di sacchetti:
+        input#sacchetti(type="number" name="sacchetti" min="1" max="10" value="1")
+
+      button#submitEvaluation(type="button") Invia Valutazione

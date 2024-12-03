@@ -1,0 +1,152 @@
+extends layout
+
+block content
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title FAQ Section
+    // Importing Bootstrap CSS
+    link(rel='stylesheet' href='/css/styles.css')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+    style.
+      /* Custom Styles */
+      .faq-section {
+      background: #f9f9f9;
+      padding: 50px 0;
+      }
+      .faq-title {
+      font-weight: bold;
+      }
+      .badge {
+      background-color: #007bff;
+      color: #fff;
+      font-size: 1rem;
+      margin-right: 10px;
+      }
+
+  section#titolopaginasponsor
+    h1 I nostri Sponsor 
+    h3#sottotitolosponsors Gli sponsor ci permettono di portare sempre più attività all'interno della nostra splendita città. 
+  
+  .custom-shape-divider-top-1724719592
+    svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
+        path.shape-fill(d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25')
+        path.shape-fill(d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5')
+        path.shape-fill(d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z')
+
+  section#contenitoreSponsors
+    .grid-container
+        .grid-item(style='background-color:black;' href='http://fldgroup.it')
+            img(src='/medias/FLDGROUP.jpg' alt='Image 1')
+        .grid-item
+            img(src='/medias/LOGO_01.jpg' alt='Image 2')
+        .grid-item
+            img(src='/medias/UGOLOTTI_logo_bianco_page-0001.jpg' alt='Image 3')
+        .grid-item
+            img(src='/medias/sponsor_iq_page-0001.jpg' alt='Image 3')
+        .grid-item
+            img(src='/medias/logo_pinsami_page-0001.jpg' alt='Image 3')
+        .grid-item.plus +
+
+  section#formsponsor 
+    .container
+        .row
+            .col-md-6.d-flex.flex-column.justify-content-center.text-center
+              h1#titolosponsor Vuoi diventare sponsor?
+              p#testosponsor  Diventa sponsor e contribuisci a creare un evento dove i bambini possono 
+                strong socializzare 
+                | e 
+                em divertirsi 
+                | in un ambiente 
+                strong sicuro 
+                | e 
+                em gioioso
+                | . Unisciti a noi per offrire agli adulti l'opportunità di vivere momenti di 
+                strong compagnia 
+                | e 
+                em allegria
+                | . Sostieni la nostra missione!
+              
+
+            // Colonna Sinistra: Immagine di bambini che si divertono
+            .col-md-6.text-center
+                .container-form-partecipazione
+                    .navbar-container-logo 
+                        .navbar-logo 
+                            img(src="/medias/Logo_Largo_Bianco.png", alt="Logo", width="180", height="60", class="d-inline-block align-text-top")
+                    form(action="/richiestasponsor", method="POST")
+                      .mb-3
+                        label(for="sponsorname") Nome Azienda
+                        input.form-control(type="text", id="sponsorname", name="nomeazienda", required)
+                      .mb-3
+                        label(for="sponsoremail") Email
+                        input.form-control(type="email", id="sponsoremail", name="email", required)
+                      .mb-3
+                        label(for="sponsortext") Messaggio
+                        input.form-control(type="text", id="sponsortext", name="messaggio", required)
+                      br
+                      button.btn.btn-primary#inviodatipartecipazione(type="submit") Invia Richiesta
+
+
+  footer.text-center.text-lg-start.bg-body-tertiary.text-muted
+    // Section: Social media
+
+    section
+      .container.text-center.text-md-start.mt-5
+        // Grid row
+        .row.mt-3
+          // Grid column
+          .col-md-3.col-lg-4.col-xl-3.mx-auto.mb-4
+            // Content
+            h6.text-uppercase.fw-bold.mb-4
+              |  Il progetto
+            p
+              | Colorgame è un progetto candidato al concorso europeo per eventi organizzati da giovani per giovani!
+            .navbar-container-logo 
+              .navbar-logo 
+                img(src="/medias/Logo_Largo_Bianco.png", alt="Logo", width="160", height="60", class="d-inline-block align-text-top")
+          // Grid column
+          .col-md-2.col-lg-2.col-xl-2.mx-auto.mb-4
+            // Links
+            h6.text-uppercase.fw-bold.mb-4
+              | Altre Pagine
+            p
+              a.text-reset(href='#!') Home
+            p
+              a.text-reset(href='#!') Partecipa
+            p
+              a.text-reset(href='#!') Contatti
+            p
+              a.text-reset(href='#!') Sponsor
+          // Grid column
+          // Grid column
+          
+          .col-md-4.col-lg-3.col-xl-3.mx-auto.mb-md-0.mb-4
+            // Links
+            h6.text-uppercase.fw-bold.mb-4 Contatti
+            p
+              i.fas.fa-home.me-3
+              |  Cittadella di Parma
+            p
+              i.fas.fa-envelope.me-3
+              |  colorgame@gmail.com
+            p
+              i.fas.fa-phone.me-3
+              |  + 01 234 567 88
+            
+          // Grid column
+        // Grid row
+    // Section: Links
+    // Copyright
+    .text-center.p-4(style='background-color: rgba(0, 0, 0, 0.05);')
+      | &copy; 2024 Copyright: 
+      a.text-reset.fw-bold(href='') Colorgame
+  script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js')
+  script.
+      document.querySelector('.grid-item.plus').addEventListener('click', function() {
+        document.querySelector('#formsponsor').scrollIntoView({
+          behavior: 'smooth' // Per un'animazione fluida dello scroll
+            });
+        });

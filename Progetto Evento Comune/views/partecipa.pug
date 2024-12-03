@@ -1,0 +1,259 @@
+extends layout
+block content
+  head
+    title ColorGame - Comune di Parma
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel='stylesheet' href='/css/styles.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.css' integrity='sha512-kMPqFnKueEwgQFzXLEEl671aHhQqrZLS5IP3HzqdfozaST/EgU+/wkM07JCmXFAt9GO810I//8DBonsJUzGQsQ==' crossorigin='anonymous' referrerpolicy='no-referrer')
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css')
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css')
+    style.
+      body {font-family: "Lato", sans-serif}
+      .mySlides {display: none}
+      .logo { width: 150px; }
+      .header {
+        background-color: #f8f9fa;
+        padding: 20px 0;
+      }
+      .header .logo {
+        margin-right: 10px;
+      }
+      .header h1 {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .section {
+        padding: 60px 0;
+      }
+      .section-title {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      #titolohome{
+        font-size: 46px;
+      }
+      .mb-3>label{
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .mb-3>input{
+        border-color: rgb(13, 55, 127);
+      }
+
+  body
+    section.doppia-sezione
+      .container
+        .row
+            .col-md-6.d-flex.flex-column.justify-content-center.text-center
+              h1.section-title-light#titolohome Perchè Partecipare?
+              p#testopartecipazione Partecipa per far 
+                  strong socializzare 
+                  | e 
+                  em divertire 
+                  | i bambini in un ambiente 
+                  strong sicuro 
+                  | e 
+                  em gioioso
+                  | . Anche gli adulti potranno godersi momenti di 
+                  strong compagnia 
+                  | e 
+                  em allegria.
+              .container-div-counter
+                .stats-container
+                  .stat
+                    .subscribers-odometer.odometer.plus 0
+                    .type Membri Staff
+                  .stat
+                    .videos-odometer.odometer.plus 0
+                    .type Giochi
+                  .stat
+                    .projects-odometer.odometer.plus 0
+                    .type Premi
+              
+
+            // Colonna Sinistra: Immagine di bambini che si divertono
+            .col-md-6.text-center
+                .container-form-partecipazione
+                    .navbar-container-logo 
+                        .navbar-logo 
+                            img(src="/medias/Logo_Largo_Bianco.png", alt="Logo", width="180", height="60", class="d-inline-block align-text-top")
+                    form(action="/register", method="POST")
+                      .mb-3
+                          label(for="firstName") Nome
+                          input.form-control(type="text", id="firstName", name="firstName", required)
+                      .mb-3
+                          label(for="lastName") Cognome
+                          input.form-control(type="text", id="lastName", name="lastName", required)
+                      .mb-3
+                          label(for="email") Email
+                          input.form-control(type="email", id="email", name="email", required)
+                      .mb-3
+                          .form-check
+                              input.form-check-input(type="checkbox", id="privacyConsent", name="privacyConsent", required)
+                              label.form-check-label(for="privacyConsent")
+                                  | Accetto il 
+                                  a(href="/disclaimerprivacy", target="_blank") trattamento dei dati personali
+                            
+                      .mb-3
+                          .form-check
+                              input.form-check-input(type="checkbox", id="liabilityConsent", name="liabilityConsent", required)
+                              label.form-check-label(for="liabilityConsent")
+                                  | Accetto la 
+                                  a(href="/limitazionediresponsabilita", target="_blank") limitazione di responsabilità.
+                      button.btn.btn-primary#inviodatipartecipazione(type="submit") Procedi al Pagamento
+                              
+
+    .container#container-timeline
+        .timeline
+            .timeline-container.primary
+                .timeline-icon
+                    |1
+                .timeline-body
+                    h4.timeline-title
+                    span.badge Mostra o Compra il Biglietto
+                    p 
+                    |Per partecipare è necessario avere il biglietto d'ingresso, facilmente acquistabile online o direttamente di persona. Il biglietto garantisce l'accesso a tutte le attività e giochi, offrendo un'esperienza unica per grandi e piccoli. Non perdere questa occasione! Tutti possono gareggiare, indipendentemente dall'età, e vivere una giornata all'insegna del colore e del divertimento. I fondi raccolti saranno devoluti in beneficenza, quindi il tuo contributo sarà fondamentale.
+                    p.timeline-subtitle Tutti possono gareggiare!
+            .timeline-container.danger
+                .timeline-icon
+                    |2
+                .timeline-body
+                    h4.timeline-title
+                    span.badge Ottieni il braccialetto
+                    p 
+                    |Un nostro operatore si prenderà cura di te, ti darà un braccialetto collegandolo all'account utilizzato durante la registrazione. Stai attento a non perderlo, poiché è l'unico modo per tenere traccia dei punti accumulati durante l'evento. Il braccialetto ti permetterà di partecipare a tutte le attività e di monitorare i tuoi progressi. Senza di esso, non potrai usufruire dei premi e delle sorprese finali, quindi trattalo con cura! Inoltre, il braccialetto rappresenta un ricordo unico di questa giornata speciale.
+                    p.timeline-subtitle Attenzione al braccialetto!
+            .timeline-container.success
+                .timeline-icon
+                    |3
+                .timeline-body
+                    h4.timeline-title
+                    span.badge Gioca e competi 
+                    p 
+                    |Unisciti al divertimento, sfida amici e familiari in giochi entusiasmanti e metti alla prova le tue abilità per vincere fantastici premi. Competi per raggiungere la vetta della classifica e dimostra di essere il migliore in ogni sfida, godendoti un'esperienza unica e coinvolgente. Ogni gioco è pensato per offrire il massimo divertimento, e più giochi farai, maggiori saranno le tue possibilità di vincere! Non dimenticare di divertirti e colorare la giornata con allegria.
+                    p.timeline-subtitle Competi e divertiti!
+            .timeline-container.warning
+                .timeline-icon
+                    |4
+                .timeline-body
+                    h4.timeline-title
+                    span.badge Ottieni punti
+                    p
+                    | Durante l'evento, accumulerai punti partecipando ai vari giochi e sfide. Ogni attività offre una diversa quantità di punti, e maggiore sarà il tuo impegno, più possibilità avrai di scalare la classifica. Il sistema a punti ti permette di monitorare i tuoi progressi e di competere per ottenere premi esclusivi. Divertiti e cerca di raccogliere quanti più punti possibili!
+                    p.timeline-subtitle Una sana competizione è chiave!
+            .timeline-container
+                .timeline-icon
+                    |4
+                .timeline-body
+                    h4.timeline-title
+                    span.badge#finale5 Vinci Premi!
+                    p
+                    | Alla fine dell'evento, i partecipanti con il maggior numero di punti riceveranno premi esclusivi, come gadget personalizzati, sconti sugli eventi futuri e sorprese speciali. Ogni premio è stato pensato per rendere questa giornata memorabile. Non importa se vinci o no: l'importante è divertirsi e sostenere una causa benefica mentre si vive un’esperienza indimenticabile piena di colori, giochi e allegria!
+                    p.timeline-subtitle Non scappare, dopo la garà festeggiamo!
+                .timeline-container.info
+                .timeline-icon
+                    |5
+    
+    
+
+    footer.text-center.text-lg-start.bg-body-tertiary.text-muted
+      // Section: Social media
+
+      section
+        .container.text-center.text-md-start.mt-5
+          // Grid row
+          .row.mt-3
+            // Grid column
+            .col-md-3.col-lg-4.col-xl-3.mx-auto.mb-4
+              // Content
+              h6.text-uppercase.fw-bold.mb-4
+                |  Il progetto
+              p
+                | Colorgame è un progetto candidato al concorso europeo per eventi organizzati da giovani per giovani!
+              .navbar-container-logo 
+                .navbar-logo 
+                  img(src="/medias/Logo_Largo_Bianco.png", alt="Logo", width="180", height="60", class="d-inline-block align-text-top")
+            // Grid column
+            .col-md-2.col-lg-2.col-xl-2.mx-auto.mb-4
+              // Links
+              h6.text-uppercase.fw-bold.mb-4
+                | Altre Pagine
+              p
+                a.text-reset(href='#!') Home
+              p
+                a.text-reset(href='#!') Partecipa
+              p
+                a.text-reset(href='#!') Contatti
+              p
+                a.text-reset(href='#!') Sponsor
+            // Grid column
+            // Grid column
+            
+            .col-md-4.col-lg-3.col-xl-3.mx-auto.mb-md-0.mb-4
+              // Links
+              h6.text-uppercase.fw-bold.mb-4 Contatti
+              p
+                i.fas.fa-home.me-3
+                |  Cittadella di Parma
+              p
+                i.fas.fa-envelope.me-3
+                |  colorgame@gmail.com
+              p
+                i.fas.fa-phone.me-3
+                |  + 01 234 567 88
+              
+            // Grid column
+          // Grid row
+      // Section: Links
+      // Copyright
+      .text-center.p-4(style='background-color: rgba(0, 0, 0, 0.05);')
+        | &copy; 2024 Copyright: 
+        a.text-reset.fw-bold(href='') Colorgame
+      // Copyright
+    // Footer
+
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js' integrity='sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw==' crossorigin='anonymous' referrerpolicy='no-referrer')
+
+  script.
+    const createOdometer = (el, value) => {
+      const odometer = new Odometer({
+        el: el,
+        value: 0,
+      });
+
+      let hasRun = false;
+
+      const options = {
+        threshold: [0, 0.9],
+      };
+
+      const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (!hasRun) {
+              odometer.update(value);
+              hasRun = true;
+            }
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback, options);
+      observer.observe(el);
+    };
+
+    const subscribersOdometer = document.querySelector(".subscribers-odometer");
+    createOdometer(subscribersOdometer, 150);
+
+    const videosOdometer = document.querySelector(".videos-odometer");
+    createOdometer(videosOdometer, 12);
+
+    const projectsOdometer = document.querySelector(".projects-odometer");
+    createOdometer(projectsOdometer, 20);

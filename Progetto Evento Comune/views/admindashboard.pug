@@ -1,0 +1,100 @@
+doctype html
+html
+  head
+    title Admin - Menu
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+    style.
+      body {
+        background-color: rgb(13, 55, 127);
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container-home {
+        text-align: center;
+        margin-top: 50px;
+        left: 50%;
+      }
+      h1 {
+        color: #ffffff;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+      .menu-item {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px 40px;
+        margin: 15px;
+        border-radius: 15px;
+        text-align: center;
+        transition: transform 0.3s, background-color 0.3s;
+        cursor: pointer;
+        width: 250px;
+        font-size: 1.2rem;
+      }
+      .menu-item:hover {
+        transform: translateY(-10px);
+        background-color: #0056b3;
+      }
+      .menu-item i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        display: block;
+      }
+      p {
+        margin: 0;
+      }
+      .emoji {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        display: block;
+      }
+      #container-opzioni{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+      }
+  body
+    .container-home
+      h1 Admin Dashboard 🛠️
+
+    // Menu di selezione
+    #container-opzioni
+      .menu-item#adminmenu
+        i.fa.fa-chart-line
+        p Classifica 🏆
+        
+      .menu-item#registrazionegiocatori
+        i.fa.fa-user-plus
+        p Registrazione Giocatori 📝
+        
+      .menu-item#checkin
+        i.fa.fa-check-circle
+        p Check-In Giocatori 🎫
+        
+      .menu-item#assegnazionepunti
+        i.fa.fa-star
+        p Assegnazione Punti ⭐
+
+  script.
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('#checkin').addEventListener('click', function() {
+        window.location.href = '/private/checkin';
+      });
+
+      document.querySelector('#registrazionegiocatori').addEventListener('click', function() {
+        window.location.href = '/private/registrazionecontanti';
+      });
+
+      document.querySelector('#assegnazionepunti').addEventListener('click', function() {
+        window.location.href = '/private/assegnazionepunti';
+      });
+
+      document.querySelector('#adminmenu').addEventListener('click', function() {
+        window.location.href = '/private/adminclassifica';
+      });
+    });

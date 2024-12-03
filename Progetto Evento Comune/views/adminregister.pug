@@ -1,0 +1,112 @@
+doctype html
+html
+  head
+    title Registrazione
+    meta(name="viewport", content="width=device-width, initial-scale=1") 
+    script(src="https://unpkg.com/html5-qrcode/html5-qrcode.min.js")
+    style.
+      body {
+        background-color: #e9f5ee; /* Verde chiaro di sfondo */
+        color: #0d377f; /* Colore del testo */
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        margin: 0;
+      }
+      .card {
+        background-color: #f8f9fa;
+        border: 3px solid #28a745; /* Bordo verde */
+        border-radius: 12px;
+        padding: 25px;
+        max-width: 500px;
+        margin: 40px auto; /* Centra il form */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #28a745; /* Verde */
+      }
+      label {
+        display: block;
+        font-size: 20px; /* Label più grande */
+        margin-bottom: 10px;
+        color: #0d377f; /* Colore scuro del testo */
+      }
+      input {
+        width: 100%; /* Adatta gli input alla larghezza del form */
+        padding: 12px;
+        font-size: 18px; /* Input più grande */
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+      .input-container {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        width: 100%;
+      }
+      .camera-icon {
+        cursor: pointer;
+        font-size: 30px; /* Icona più grande e visibile */
+        color: #28a745; /* Colore verde per richiamare il tema */
+        margin-left: 10px;
+        transition: color 0.3s ease;
+      }
+      .camera-icon:hover {
+        color: #218838; /* Effetto hover per l'icona della fotocamera */
+      }
+      .btn-submit {
+        display: block;
+        width: 100%;
+        background-color: #28a745; /* Bottone verde */
+        color: #fff;
+        padding: 15px;
+        font-size: 20px; /* Dimensione del bottone aumentata */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .btn-submit:hover {
+        background-color: #218838; /* Scuro al passaggio */
+      }
+      .success-message {
+        display: none;
+        color: #28a745;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+      }
+      #qr-reader {
+        margin: 20px auto;
+        width: 300px;
+        height: 300px;
+        display: none; /* Nascondiamo finché non serve */
+      }
+  body
+    .container
+      .card
+        h1  REGISTRAZIONE CLIENTI 
+        form#registrationForm
+          label(for="firstName") Nome:
+          input#firstName(type="text" name="firstName" placeholder="Inserisci il tuo nome" required)
+          label(for="lastName") Cognome:
+          input#lastName(type="text" name="lastName" placeholder="Inserisci il tuo cognome" required)
+          label(for="email") Email:
+          input#email(type="email" name="email" placeholder="Inserisci la tua email" required)
+          
+          //- Nuovo campo UUID con icona fotocamera
+          label(for="uuid") UUID (Scansiona QR):
+          .input-container
+            input#uuid(type="text" name="uuid" placeholder="Scansiona o inserisci UUID")
+            div.camera-icon#uuidScannerIcon 📷
+          
+          button.btn-submit(type="submit") Registra
+        p.success-message#successMessage Registrazione avvenuta con successo!
+
+    div#qr-reader // Scanner QR nascosto finché non viene selezionato
+
+    script(src="/js/adminregister.js")

@@ -1,0 +1,183 @@
+
+#containerAnimazionePagamento {
+    width: 100%;
+    background-color: rgb(13, 55, 127);
+    text-align: center;
+  }
+  
+  
+  
+  
+  .success-animation {
+    padding: 20px auto;
+  }
+  
+  .checkmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #4bb71b;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4bb71b;
+    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+    margin: 20px auto; 
+  }
+  
+  #graziexacquisto {
+    background-color: rgb(13, 55, 127);
+    height: 80px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #graziexacquisto h1 {
+    color: white;
+    font-size: 52px;
+    font-weight: 600;
+  }
+  
+  #regole .card {
+    border-radius: 15px; /* Maggiore border radius */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Shadow box */
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+  #regole .card-title {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .checkmark {
+      width: 80px;
+      height: 80px;
+    }
+    
+    #graziexacquisto h1 {
+      font-size: 36px;
+    }
+  }
+  
+  #regole .card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+
+
+
+.container-carte-acquisto{
+    background-color: rgb(13, 55, 127);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+  
+  .card-body-acquisto{
+    width: 70%;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .bi.bi-1-square-fill{
+    font-size: 40px;
+  }
+  
+  .container-body-acquisto h5{
+    font-size: 42px;
+  }
+  
+  .container-body-acquisto p{
+    font-size: 28px;
+    word-wrap: break-word;
+  }
+  
+  
+  @media (max-width: 600px) {
+    
+  .card-body-acquisto{
+    width: 70%;
+    min-width: 300px;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .container-body-acquisto h5{
+    font-size: 42px;
+    text-align: center;
+  }
+  
+  .container-body-acquisto p{
+    font-size: 28px;
+  }
+  
+  
+  #containerAnimazionePagamento {
+    width: 100%;
+    background-color: rgb(13, 55, 127);
+    text-align: center;
+    margin-top: 5%;
+  }
+  
+  }
+  
+  
+  .container-prima-parte{
+    display: flex;
+    flex-direction: column;
+  
+    background-color: rgb(13, 55, 127);
+  }
+
+
+  
+
+/* Per schermi più grandi */
+@media (min-width: 992px) {
+    .card {
+      max-width: 200px; /* Le card diventano più larghe */
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  /* Per schermi di dimensioni medie */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .card {
+      max-width: 220px;
+    }
+  }
+  
+
+.container-body-acquisto{
+    text-align: center;
+}

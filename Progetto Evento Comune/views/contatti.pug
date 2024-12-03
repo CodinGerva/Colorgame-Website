@@ -1,0 +1,210 @@
+extends layout
+
+block content
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title FAQ Section
+    // Importing Bootstrap CSS
+    link(rel='stylesheet' href='/css/style_contatti.css')
+    link(rel='stylesheet' href='/css/styles.css')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+    style.
+      /* Custom Styles */
+      .faq-section {
+      background: #f9f9f9;
+      padding: 50px 0;
+      }
+      .faq-title {
+      font-weight: bold;
+      }
+      .badge {
+      background-color: #007bff;
+      color: #fff;
+      font-size: 1rem;
+      margin-right: 10px;
+      }
+  section.faq-section
+    .container
+      .row
+        .col-md-6.offset-md-3
+          .faq-title.text-center.pb-3
+            h2 FAQ
+        .col-md-6.offset-md-3
+          #accordion.faq
+            .card
+              #faqHeading-1.card-header
+                .mb-0
+                  h5.faq-title(data-toggle='collapse' data-target='#faqCollapse-1' data-aria-expanded='true' data-aria-controls='faqCollapse-1')
+                    span.badge 1
+                    strong Come si svolgono i giochi?
+              #faqCollapse-1.collapse(aria-labelledby='faqHeading-1' data-parent='#accordion')
+                .card-body
+                  p
+                    | L'ordine è a discrezione dei partecipanti, ogni partecipante si recherà agli stand appositi per provare a fare un buon punteggio ad una serie di giochi, i punteggi vengono assegnati dai membri dello staff che si occuperanno contemporaneamente della sicurezza dei partecipanti!
+            .card
+              #faqHeading-2.card-header
+                .mb-0
+                  h5.faq-title(data-toggle='collapse' data-target='#faqCollapse-2' data-aria-expanded='false' data-aria-controls='faqCollapse-2')
+                    span.badge 2
+                    strong I bambini devono essere accompagnati?
+              #faqCollapse-2.collapse(aria-labelledby='faqHeading-2' data-parent='#accordion')
+                .card-body
+                  p
+                    | La sicurezza dei partecipanti è la nostra priorità, vista la vasta area del parco e il grande numero di persone consigliamo di seguire sempre i bambini ed evitare di lasciarli soli.
+            .card
+              #faqHeading-3.card-header
+                .mb-0
+                  h5.faq-title(data-toggle='collapse' data-target='#faqCollapse-3' data-aria-expanded='false' data-aria-controls='faqCollapse-3')
+                    span.badge 3
+                    strong Cè una differenza tra biglietto online e fisico?
+              #faqCollapse-3.collapse(aria-labelledby='faqHeading-3' data-parent='#accordion')
+                .card-body
+                  p
+                    | Entrambe le metodologie permettono di partecipare ai giochi, il primo metodo è piu rapido e permette di accedere dopo un rapido controllo da parte dello staff e la consegna del braccialetto di accedere direttamente all'area predisposta per i giochi!
+            .card
+              #faqHeading-4.card-header
+                .mb-0
+                  h5.faq-title(data-toggle='collapse' data-target='#faqCollapse-4' data-aria-expanded='false' data-aria-controls='faqCollapse-4')
+                    span.badge 4
+                    strong  Perchè devo pagare il biglietto?
+              #faqCollapse-4.collapse(aria-labelledby='faqHeading-4' data-parent='#accordion')
+                .card-body
+                  p
+                    | Il pagamento del biglietto è rivolto a coloro che voglio partecipare ai giochi, ricordiamo che l'intero importo del biglietto è destinato ad essere donato all'
+                    strong Ospedale di Parma
+                    |, è possibile inoltre 
+                    a(href='https://donate.stripe.com/test_cN2aIBbOEejd5DGfYZ') effettuare una donazione 
+                    |dal nostro menu, per tutti gli altri è consentito il libero accesso all'area del parco dove una serie di servizi saranno pronti ad accogliervi!
+            .card
+              #faqHeading-5.card-header
+                .mb-0
+                  h5.faq-title(data-toggle='collapse' data-target='#faqCollapse-5' data-aria-expanded='false' data-aria-controls='faqCollapse-5')
+                    span.badge 5
+                    strong  Qual'è l'età minima e massima per partecipare?
+              #faqCollapse-5.collapse(aria-labelledby='faqHeading-5' data-parent='#accordion')
+                .card-body
+                  p
+                    | Non sono specificate delle età precise, è importante tenere a mente però che i giochi e la loro difficoltà sono calibrati su una fascia d'età che va dai
+                    strong  6 ai 12 anni di età
+                    |, agli adulti non sarà permesso di partecipare.
+
+  .background
+    .container
+      .screen
+        .screen-header
+          .screen-header-left
+            .screen-header-button.maximize
+            .screen-header-button.minimize
+          .screen-header-right
+            .screen-header-ellipsis
+            .screen-header-ellipsis
+        .screen-body
+          .screen-body-item.left
+            .app-title
+              span NON HAI TROVATO LA RISPOSTA ALLA TUA DOMANDA?
+            .app-contact INFORMAZIONI DI CONTATTO : +00 00 000 000 000
+          .screen-body-item
+            .app-form
+              .app-form-group
+                input#nome.app-form-control(placeholder='NOME')
+              .app-form-group
+                input#email.app-form-control(placeholder='EMAIL')
+              .app-form-group.message
+                input#messaggio.app-form-control(placeholder='MESSAGGIO')
+              .app-form-group.buttons
+                button#invia.app-form-button INVIA
+
+  
+  footer.text-center.text-lg-start.bg-body-tertiary.text-muted
+    // Section: Social media
+
+    section
+      .container.text-center.text-md-start.mt-5
+        // Grid row
+        .row.mt-3
+          // Grid column
+          .col-md-3.col-lg-4.col-xl-3.mx-auto.mb-4
+            // Content
+            h6.text-uppercase.fw-bold.mb-4
+              |  Il progetto
+            p
+              | Colorgame è un progetto candidato al concorso europeo per eventi organizzati da giovani per giovani!
+            .navbar-container-logo 
+              .navbar-logo 
+                img(src="/medias/Logo_Largo_Bianco.png", alt="Logo", width="160", height="60", class="d-inline-block align-text-top")
+          // Grid column
+          .col-md-2.col-lg-2.col-xl-2.mx-auto.mb-4
+            // Links
+            h6.text-uppercase.fw-bold.mb-4
+              | Altre Pagine
+            p
+              a.text-reset(href='#!') Home
+            p
+              a.text-reset(href='#!') Partecipa
+            p
+              a.text-reset(href='#!') Contatti
+            p
+              a.text-reset(href='#!') Sponsor
+          // Grid column
+          // Grid column
+          
+          .col-md-4.col-lg-3.col-xl-3.mx-auto.mb-md-0.mb-4
+            // Links
+            h6.text-uppercase.fw-bold.mb-4 Contatti
+            p
+              i.fas.fa-home.me-3
+              |  Cittadella di Parma
+            p
+              i.fas.fa-envelope.me-3
+              |  colorgame@gmail.com
+            p
+              i.fas.fa-phone.me-3
+              |  + 01 234 567 88
+            
+          // Grid column
+        // Grid row
+    // Section: Links
+    // Copyright
+    .text-center.p-4(style='background-color: rgba(0, 0, 0, 0.05);')
+      | &copy; 2024 Copyright: 
+      a.text-reset.fw-bold(href='') Colorgame
+  script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js')
+  script. 
+    document.addEventListener('DOMContentLoaded', function() {
+      const inviaButton = document.getElementById('invia');
+      inviaButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const messaggio = document.getElementById('messaggio').value;
+        const richiesta_contatto = {
+          nome: nome,
+          email: email,
+          messaggio: messaggio
+        };
+        console.log(JSON.stringify(richiesta_contatto))
+        // Invia i dati al server tramite una richiesta POST
+        fetch('/richiestacontatto', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(richiesta_contatto),
+        })
+        .then(response => response.json())
+        .then(data => {
+          // Puoi gestire la risposta qui, come mostrare un messaggio di successo
+          document.getElementById('nome').value = " ";
+          document.getElementById('email').value = " ";
+          document.getElementById('messaggio').value = " ";
+        })
+        .catch((error) => {
+          console.error('Errore:', error);
+          alert('Si è verificato un errore durante l\'invio del messaggio.');
+        });
+      });
+    });
+  |
